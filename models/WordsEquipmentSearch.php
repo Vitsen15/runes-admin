@@ -2,10 +2,8 @@
 
 namespace app\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\WordsEquipment;
 
 /**
  * WordsEquipmentSearch represents the model behind the search form about `app\models\WordsEquipment`.
@@ -40,7 +38,7 @@ class WordsEquipmentSearch extends WordsEquipment
      */
     public function search($params)
     {
-        $query = WordsEquipment::find();
+        $query = WordsEquipment::find()->with(['runesWord', 'equipment']);
 
         // add conditions that should always apply here
 
