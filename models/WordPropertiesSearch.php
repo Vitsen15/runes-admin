@@ -40,7 +40,8 @@ class WordPropertiesSearch extends WordProperties
      */
     public function search($params)
     {
-        $query = WordProperties::find();
+        $query = WordProperties::find()
+            ->with(['word', 'propertyType', 'propertyEffect', 'propertyValueType']);
 
         // add conditions that should always apply here
 
