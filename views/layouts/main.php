@@ -44,7 +44,8 @@ AppAsset::register($this);
                 ['label' => 'Words', 'url' => ['/words/index']],
                 ['label' => 'Properties', 'url' => ['/word-properties/index']],
                 ['label' => 'Property types', 'url' => ['/property-type/index']],
-                ['label' => 'Words equipment', 'url' => ['/words-equipment/index']]
+                ['label' => 'Words equipment', 'url' => ['/words-equipment/index']],
+                ['label' => 'Equipment', 'url' => ['/equipment/index']]
             ]],
 
             Yii::$app->user->isGuest ? (

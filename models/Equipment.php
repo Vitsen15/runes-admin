@@ -2,8 +2,6 @@
 
 namespace app\models;
 
-use Yii;
-
 /**
  * This is the model class for table "equipment".
  *
@@ -47,9 +45,9 @@ class Equipment extends \yii\db\ActiveRecord
     {
         return [
             'type_id' => 'Type ID',
-            'type_name' => 'Type Name',
-            'type_parent_id' => 'Type Parent ID',
-            'description' => 'Description',
+            'type_name' => 'Название',
+            'type_parent_id' => 'Родительский тип',
+            'description' => 'Тип',
         ];
     }
 
