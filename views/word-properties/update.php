@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\WordProperties */
 
-$this->title = 'Update Word Properties: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Word Properties', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Обновить свойство: ' . $model->propertyType->name;
+$this->params['breadcrumbs'][] = ['label' => 'Свойства', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->propertyType->name, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="word-properties-update">
 

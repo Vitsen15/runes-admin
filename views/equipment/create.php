@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Equipment */
 
 $this->title = 'Создать снаряжение';
-$this->params['breadcrumbs'][] = ['label' => 'Equipments', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Снаряжение', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="equipment-create">

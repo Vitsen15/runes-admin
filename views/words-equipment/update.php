@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\WordsEquipment */
 
-$this->title = 'Update Words Equipment: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Words Equipments', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Обновить снаряжение ';
+$this->params['breadcrumbs'][] = ['label' => 'Снаряжение рунных слов', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->runesWord->name, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="words-equipment-update">
 

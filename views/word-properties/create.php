@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\WordProperties */
 
-$this->title = 'Create Word Properties';
-$this->params['breadcrumbs'][] = ['label' => 'Word Properties', 'url' => ['index']];
+$this->title = 'Создать свойство';
+$this->params['breadcrumbs'][] = ['label' => 'Свойства', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="word-properties-create">

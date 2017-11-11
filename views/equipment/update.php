@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\Equipment */
 
 $this->title = 'Обновить снаряжение: ' . $model->description;
-$this->params['breadcrumbs'][] = ['label' => 'Equipments', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->type_id, 'url' => ['view', 'id' => $model->type_id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => 'Снаряжение', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->description, 'url' => ['view', 'id' => $model->type_id]];
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="equipment-update">
 

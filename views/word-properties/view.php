@@ -1,13 +1,14 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\WordProperties */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Word Properties', 'url' => ['index']];
+$this->title = $model->propertyType->name;
+$this->params['breadcrumbs'][] = ['label' => 'Свойства', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="word-properties-view">
@@ -15,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены что хотите удалить эту запись?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -29,10 +30,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'word_id',
-            'property_type_id',
-            'property_effect_id',
-            'property_value_type_id',
+            [
+                'attribute' => 'word_id',
+                'value' => ArrayHelper::getValue($model, 'word.name')
+            ],
+            [
+                'attribute' => 'property_type_id',
+                'value' => ArrayHelper::getValue($model, 'propertyType.name')
+            ],
+            [
+                'attribute' => 'property_effect_id',
+                'value' => ArrayHelper::getValue($model, 'propertyEffect.effect_type')
+            ],
+            [
+                'attribute' => 'property_value_type_id',
+                'value' => ArrayHelper::getValue($model, 'propertyValueType.value_type')
+            ],
             'property_duration',
             'property_min_value',
             'property_max_value',

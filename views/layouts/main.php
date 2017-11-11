@@ -40,12 +40,12 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Words', 'items' => [
-                ['label' => 'Words', 'url' => ['/words/index']],
-                ['label' => 'Properties', 'url' => ['/word-properties/index']],
-                ['label' => 'Property types', 'url' => ['/property-type/index']],
-                ['label' => 'Words equipment', 'url' => ['/words-equipment/index']],
-                ['label' => 'Equipment', 'url' => ['/equipment/index']]
+            ['label' => 'Рунные слова', 'items' => [
+                ['label' => 'Рунные слова', 'url' => ['/words/index']],
+                ['label' => 'Свойства рунных слов', 'url' => ['/word-properties/index']],
+                ['label' => 'Типы свойств для рунных слов', 'url' => ['/property-type/index']],
+                ['label' => 'Снаряжение для рунных слов', 'url' => ['/words-equipment/index']],
+                ['label' => 'Снаряжение', 'url' => ['/equipment/index']]
             ]],
 
             Yii::$app->user->isGuest ? (

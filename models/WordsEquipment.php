@@ -45,7 +45,7 @@ class WordsEquipment extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'runes_word_id' => 'Слово',
-            'equipment_id' => 'Инвентарь',
+            'equipment_id' => 'Снаряжение',
         ];
     }
 

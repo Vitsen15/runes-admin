@@ -9,7 +9,7 @@ use app\models\Equipment;
 /* @var $searchModel app\models\WordsEquipmentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Words Equipments';
+$this->title = 'Снаряжение рунных слов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="words-equipment-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Words Equipment', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить снаряжение к слову', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

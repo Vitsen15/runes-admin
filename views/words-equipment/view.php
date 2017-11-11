@@ -7,8 +7,8 @@ use \yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model app\models\WordsEquipment */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Words Equipments', 'url' => ['index']];
+$this->title = $model->runesWord->name;
+$this->params['breadcrumbs'][] = ['label' => 'Снаряжение рунных слов', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="words-equipment-view">
@@ -16,11 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a('Обновить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Вы уверены что хотите удалить эту запись?',
                 'method' => 'post',
             ],
         ]) ?>

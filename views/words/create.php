@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Words */
 
-$this->title = 'Create Words';
-$this->params['breadcrumbs'][] = ['label' => 'Words', 'url' => ['index']];
+$this->title = 'Создать слово';
+$this->params['breadcrumbs'][] = ['label' => 'Слова', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="words-create">

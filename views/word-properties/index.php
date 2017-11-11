@@ -11,7 +11,7 @@ use \app\models\PropertyValueType;
 /* @var $searchModel app\models\WordPropertiesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Word Properties';
+$this->title = 'Свойства';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="word-properties-index">
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Word Properties', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать свойство', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -31,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             [
                 'attribute' => 'word_id',
-                'filter' => Words::find()->select(['name', 'id'])->indexBy('id')->column(),
                 'value' => 'word.name'
             ],
             [

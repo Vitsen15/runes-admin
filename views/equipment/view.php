@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Equipment */
 
 $this->title = $model->description;
-$this->params['breadcrumbs'][] = ['label' => 'Equipments', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Снаряжение', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="equipment-view">
