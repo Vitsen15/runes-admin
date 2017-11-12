@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ClassesPropertyType */
 
-$this->title = 'Update Classes Property Type: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Classes Property Types', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Обновить тип свойства:';
+$this->params['breadcrumbs'][] = ['label' => 'Типы свойств для классов', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->class->name, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="classes-property-type-update">
 
