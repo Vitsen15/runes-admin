@@ -42,9 +42,10 @@ AppAsset::register($this);
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Рунные слова', 'items' => [
                 ['label' => 'Рунные слова', 'url' => ['/words/index']],
-                ['label' => 'Свойства рунных слов', 'url' => ['/word-properties/index']],
-                ['label' => 'Типы свойств для рунных слов', 'url' => ['/property-type/index']],
-                ['label' => 'Снаряжение для рунных слов', 'url' => ['/words-equipment/index']],
+                ['label' => 'Порядок рун в слове', 'url' => ['/runes-order/index']],
+                ['label' => 'Свойства слов', 'url' => ['/word-properties/index']],
+                ['label' => 'Типы свойствв', 'url' => ['/property-type/index']],
+                ['label' => 'Снаряжение для слов', 'url' => ['/words-equipment/index']],
                 ['label' => 'Снаряжение', 'url' => ['/equipment/index']]
             ]],
 
