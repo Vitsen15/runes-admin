@@ -1,5 +1,7 @@
 <?php
 
+use app\models\Classes;
+use app\models\PropertyType;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -7,7 +9,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ClassesPropertyTypeSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Classes Property Types';
+$this->title = 'Типы свойств для классов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="classes-property-type-index">
@@ -16,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Classes Property Type', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Связать свойство', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,8 +27,16 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'class_id',
-            'property_type_id',
+            [
+                'attribute' => 'class_id',
+                'filter' => Classes::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => 'class.name'
+            ],
+            [
+                'attribute' => 'property_type_id',
+                'filter' => PropertyType::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => 'propertyType.name'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
