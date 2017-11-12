@@ -41,9 +41,9 @@ class RuneProperties extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'property' => 'Property',
-            'in_weapon' => 'In Weapon',
-            'in_armour' => 'In Armour',
+            'property' => 'Название',
+            'in_weapon' => 'В оружии',
+            'in_armour' => 'В броне',
         ];
     }
 

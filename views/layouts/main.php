@@ -51,7 +51,8 @@ AppAsset::register($this);
             ]],
             ['label' => 'Руны', 'items' => [
                 ['label' => 'Руны', 'url' => ['/runes/index']],
-                ['label' => 'Свойства рун', 'url' => ['/runes-rune-properties/index']]
+                ['label' => 'Свойства рун', 'url' => ['/runes-rune-properties/index']],
+                ['label' => 'Типы свойств', 'url' => ['/rune-properties/index']]
             ]],
 
             Yii::$app->user->isGuest ? (
