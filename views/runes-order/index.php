@@ -2,12 +2,14 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\models\Runes;
+use app\models\Words;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\RunesOrderSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Runes Orders';
+$this->title = 'Порядок рун';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="runes-order-index">
@@ -16,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Runes Order', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать порядок рун', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,8 +27,16 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'rune_id',
-            'runes_word_id',
+            [
+                'attribute' => 'rune_id',
+                'filter' => Runes::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => 'rune.name'
+            ],
+            [
+                'attribute' => 'runes_word_id',
+                'filter' => Words::find()->select(['name', 'id'])->indexBy('id')->column(),
+                'value' => 'runesWord.name'
+            ],
             'rune_order',
 
             ['class' => 'yii\grid\ActionColumn'],
