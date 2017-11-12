@@ -44,8 +44,8 @@ class RunesRuneProperties extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'rune_id' => 'Rune ID',
-            'property_id' => 'Property ID',
+            'rune_id' => 'Руна',
+            'property_id' => 'Свойство',
         ];
     }
 
