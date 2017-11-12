@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "runes_order".
@@ -15,7 +16,7 @@ use Yii;
  * @property Runes $rune
  * @property Words $runesWord
  */
-class RunesOrder extends \yii\db\ActiveRecord
+class RunesOrder extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -45,9 +46,9 @@ class RunesOrder extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'rune_id' => 'Rune ID',
-            'runes_word_id' => 'Runes Word ID',
-            'rune_order' => 'Rune Order',
+            'rune_id' => 'Руна',
+            'runes_word_id' => 'Слово',
+            'rune_order' => 'Порядок',
         ];
     }
 
