@@ -50,7 +50,8 @@ AppAsset::register($this);
                 ['label' => 'Уникальные типы свойств для классов', 'url' => ['/classes-property-type/index']]
             ]],
             ['label' => 'Руны', 'items' => [
-                ['label' => 'Руны', 'url' => ['/runes/index']]
+                ['label' => 'Руны', 'url' => ['/runes/index']],
+                ['label' => 'Свойства рун', 'url' => ['/runes-rune-properties/index']]
             ]],
 
             Yii::$app->user->isGuest ? (
