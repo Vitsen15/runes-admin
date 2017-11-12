@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\RunesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Runes';
+$this->title = 'Руны';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="runes-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Runes', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
