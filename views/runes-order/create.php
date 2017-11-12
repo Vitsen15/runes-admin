@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\RunesOrder */
 
-$this->title = 'Create Runes Order';
-$this->params['breadcrumbs'][] = ['label' => 'Runes Orders', 'url' => ['index']];
+$this->title = 'Создать порядок рун';
+$this->params['breadcrumbs'][] = ['label' => 'Порядок рун', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="runes-order-create">
