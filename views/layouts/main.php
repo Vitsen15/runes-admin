@@ -46,7 +46,8 @@ AppAsset::register($this);
                 ['label' => 'Свойства слов', 'url' => ['/word-properties/index']],
                 ['label' => 'Типы свойствв', 'url' => ['/property-type/index']],
                 ['label' => 'Снаряжение для слов', 'url' => ['/words-equipment/index']],
-                ['label' => 'Снаряжение', 'url' => ['/equipment/index']]
+                ['label' => 'Снаряжение', 'url' => ['/equipment/index']],
+                ['label' => 'Уникальные типы свойств для классов', 'url' => ['/classes-property-type/index']]
             ]],
 
             Yii::$app->user->isGuest ? (
