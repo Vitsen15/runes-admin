@@ -40,7 +40,7 @@ class ClassesPropertyTypeSearch extends ClassesPropertyType
      */
     public function search($params)
     {
-        $query = ClassesPropertyType::find();
+        $query = ClassesPropertyType::find()->with(['class', 'propertyType']);
 
         // add conditions that should always apply here
 
