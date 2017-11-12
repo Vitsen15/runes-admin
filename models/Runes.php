@@ -43,9 +43,9 @@ class Runes extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'img_url' => 'Img Url',
-            'lvl' => 'Lvl',
+            'name' => 'Название',
+            'img_url' => 'Адрес изображения',
+            'lvl' => 'Уровень',
         ];
     }
 
