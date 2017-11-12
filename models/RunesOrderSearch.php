@@ -5,7 +5,6 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\RunesOrder;
 
 /**
  * RunesOrderSearch represents the model behind the search form about `app\models\RunesOrder`.
@@ -40,7 +39,7 @@ class RunesOrderSearch extends RunesOrder
      */
     public function search($params)
     {
-        $query = RunesOrder::find();
+        $query = RunesOrder::find()->with(['rune', 'runesWord']);
 
         // add conditions that should always apply here
 
