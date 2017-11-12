@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\RunesRuneProperties */
 
-$this->title = 'Create Runes Rune Properties';
-$this->params['breadcrumbs'][] = ['label' => 'Runes Rune Properties', 'url' => ['index']];
+$this->title = 'Связать свойство с руной';
+$this->params['breadcrumbs'][] = ['label' => 'Свойства рун', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="runes-rune-properties-create">

@@ -5,10 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\RunesRuneProperties */
 
-$this->title = 'Update Runes Rune Properties: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Runes Rune Properties', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Обновить свойство';
+$this->params['breadcrumbs'][] = ['label' => 'Свойства рун', 'url' => ['index']];
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="runes-rune-properties-update">
 
