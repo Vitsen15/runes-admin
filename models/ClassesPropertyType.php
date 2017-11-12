@@ -44,8 +44,8 @@ class ClassesPropertyType extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'class_id' => 'Class ID',
-            'property_type_id' => 'Property Type ID',
+            'class_id' => 'Класс',
+            'property_type_id' => 'Свойство',
         ];
     }
 
