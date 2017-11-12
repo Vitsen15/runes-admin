@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ClassesPropertyType */
 
-$this->title = 'Create Classes Property Type';
-$this->params['breadcrumbs'][] = ['label' => 'Classes Property Types', 'url' => ['index']];
+$this->title = 'Связать свойство';
+$this->params['breadcrumbs'][] = ['label' => 'Типы свойств для классов  ', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="classes-property-type-create">
