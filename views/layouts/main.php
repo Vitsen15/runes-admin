@@ -49,6 +49,9 @@ AppAsset::register($this);
                 ['label' => 'Снаряжение', 'url' => ['/equipment/index']],
                 ['label' => 'Уникальные типы свойств для классов', 'url' => ['/classes-property-type/index']]
             ]],
+            ['label' => 'Руны', 'items' => [
+                ['label' => 'Руны', 'url' => ['/runes/index']]
+            ]],
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
