@@ -1,5 +1,7 @@
 <?php
 
+use app\models\Classes;
+use app\models\PropertyType;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,9 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'class_id')->textInput() ?>
+    <?= $form->field($model, 'class_id')->dropDownList(Classes::find()->select(['name', 'id'])->indexBy('id')->column()) ?>
 
-    <?= $form->field($model, 'property_type_id')->textInput() ?>
+    <?= $form->field($model, 'property_type_id')->dropDownList(PropertyType::find()->select(['name', 'id'])->indexBy('id')->column()) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
