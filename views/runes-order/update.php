@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Обновить порядок: ' . $model->runesWord->name;
 $this->params['breadcrumbs'][] = ['label' => 'Порядок рун', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = ['label' => $model->runesWord->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="runes-order-update">
