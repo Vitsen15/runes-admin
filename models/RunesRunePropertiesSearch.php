@@ -40,7 +40,7 @@ class RunesRunePropertiesSearch extends RunesRuneProperties
      */
     public function search($params)
     {
-        $query = RunesRuneProperties::find();
+        $query = RunesRuneProperties::find()->with(['rune', 'property']);
 
         // add conditions that should always apply here
 
