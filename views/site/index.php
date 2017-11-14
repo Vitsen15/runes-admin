@@ -2,50 +2,58 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+use yii\helpers\Url;
+
+$this->title = 'Runes';
 ?>
 <div class="site-index">
-
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <h1>Менеджмент контента базы данных "runes"</h1>
     </div>
 
     <div class="body-content">
-
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-6">
+                <h2 class="text-center">Руны</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <div class="list-group">
+                    <a href="<?= Url::to(['runes/index']); ?>" class="list-group-item list-group-item-action">
+                        Руны
+                    </a>
+                    <a href="<?= Url::to(['runes-rune-properties/index']); ?>" class="list-group-item list-group-item-action">
+                        Свойства рун
+                    </a>
+                    <a href="<?= Url::to(['rune-properties/index']); ?>" class="list-group-item list-group-item-action">
+                        Типы свойств
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-6">
+                <h2 class="text-center">Рунные слова</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <div class="list-group">
+                    <a href="<?= Url::to(['words/index']); ?>" class="list-group-item list-group-item-action">
+                        Слова
+                    </a>
+                    <a href="<?= Url::to(['runes-order/index']); ?>" class="list-group-item list-group-item-action">
+                        Порядок рун в слве
+                    </a>
+                    <a href="<?= Url::to(['word-properties/index']); ?>" class="list-group-item list-group-item-action">
+                        Свойства слов
+                    </a>
+                    <a href="<?= Url::to(['property-type/index']); ?>" class="list-group-item list-group-item-action">
+                        Типы свойств
+                    </a>
+                    <a href="<?= Url::to(['words-equipment/index']); ?>" class="list-group-item list-group-item-action">
+                        Снаряжение для слов
+                    </a>
+                    <a href="<?= Url::to(['equipment/index']); ?>" class="list-group-item list-group-item-action">
+                        Снаряжение
+                    </a>
+                    <a href="<?= Url::to(['classes-property-type/index']); ?>" class="list-group-item list-group-item-action">
+                        Уникальные типы свойств для классов
+                    </a>
+                </div>
             </div>
         </div>
 

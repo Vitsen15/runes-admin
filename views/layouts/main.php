@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Главная',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,9 +37,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Руны', 'items' => [
+                ['label' => 'Руны', 'url' => ['/runes/index']],
+                ['label' => 'Свойства рун', 'url' => ['/runes-rune-properties/index']],
+                ['label' => 'Типы свойств', 'url' => ['/rune-properties/index']]
+            ]],
             ['label' => 'Рунные слова', 'items' => [
                 ['label' => 'Рунные слова', 'url' => ['/words/index']],
                 ['label' => 'Порядок рун в слове', 'url' => ['/runes-order/index']],
@@ -49,11 +51,7 @@ AppAsset::register($this);
                 ['label' => 'Снаряжение', 'url' => ['/equipment/index']],
                 ['label' => 'Уникальные типы свойств для классов', 'url' => ['/classes-property-type/index']]
             ]],
-            ['label' => 'Руны', 'items' => [
-                ['label' => 'Руны', 'url' => ['/runes/index']],
-                ['label' => 'Свойства рун', 'url' => ['/runes-rune-properties/index']],
-                ['label' => 'Типы свойств', 'url' => ['/rune-properties/index']]
-            ]],
+            ['label' => 'About', 'url' => ['/site/about']],
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
