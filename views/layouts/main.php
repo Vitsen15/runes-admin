@@ -51,15 +51,14 @@ AppAsset::register($this);
                 ['label' => 'Снаряжение', 'url' => ['/equipment/index']],
                 ['label' => 'Уникальные типы свойств для классов', 'url' => ['/classes-property-type/index']]
             ]],
-            ['label' => 'About', 'url' => ['/site/about']],
 
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Вход', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Выход (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
