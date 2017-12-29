@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             [
                 'attribute' => 'word_id',
+                'filter' => Words::find()->select(['name', 'id'])->indexBy('id')->column(),
                 'value' => 'word.name'
             ],
             [
